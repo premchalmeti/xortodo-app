@@ -1,0 +1,46 @@
+<div class="todo-dialog">
+  <h1 mat-dialog-title class="pb-2">
+    {{ data.todo.id ? "Update Task" : "New Task" }}
+  </h1>
+  <div mat-dialog-content>
+    <mat-form-field class="w-100">
+      <mat-label>Title</mat-label>
+      <input
+        matInput
+        [(ngModel)]="data.todo.title"
+        id="title"
+        type="text"
+        name="title"
+      />
+    </mat-form-field>
+    <mat-form-field class="w-100">
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        rows="3"
+        [(ngModel)]="data.todo.desc"
+        id="description"
+        type="text"
+        name="title"
+      ></textarea>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions class="float-right">
+    <button
+      mat-stroked-button
+      color="accent"
+      (click)="cancel()"
+      class="px-5 mr-1"
+    >
+      Cancel
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      [mat-dialog-close]="data"
+      class="px-5"
+    >
+      Save
+    </button>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+{
+    "/api": {
+        "target": "http://api.xortodo.com:8000",
+        "secure": false,
+        "pathRewrite": {
+            "^/api": ""
+        }
+    }
+}
