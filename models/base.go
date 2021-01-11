@@ -29,6 +29,7 @@ func init() {
 	db = conn
 
 	db.AutoMigrate(&Todo{})
+	db.AutoMigrate(&User{})
 }
 
 // GetDB exported interface to access DB instance

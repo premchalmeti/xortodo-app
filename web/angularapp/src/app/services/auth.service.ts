@@ -22,11 +22,12 @@ export class AuthService {
     this.authenticated = this.isAuthenticated();
   }
 
-  login(username: string, password: string): Observable<any> {
+  login(email: string, password: string): Observable<any> {
     return this.http
-      .post(ServiceURL.loginURL, { username, password }, this.httpOptions)
+      .post(ServiceURL.loginURL, { email, password }, this.httpOptions)
       .pipe(
         tap((userResponse) => {
+          userResponse.user.is_authenticated = true;
           if (userResponse.user) this.setAuthInfo(userResponse.user);
         })
       );

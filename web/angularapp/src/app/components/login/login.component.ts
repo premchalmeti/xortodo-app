@@ -11,7 +11,7 @@ import { AppConstants } from '../../shared/appConstants';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  username: string;
+  email: string;
   password: string;
   err_msg: string;
   hide: boolean = true;
@@ -26,12 +26,12 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    if (!this.username || !this.password) {
-      this.err_msg = 'Please enter username and password';
+    if (!this.email || !this.password) {
+      this.err_msg = 'Please enter email and password';
       return;
     }
 
-    this.authService.login(this.username, this.password).subscribe(
+    this.authService.login(this.email, this.password).subscribe(
       (response) => {
         // redirect to home
         console.log(response);
