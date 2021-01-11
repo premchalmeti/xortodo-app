@@ -40,7 +40,7 @@ func LoginAPI(w http.ResponseWriter, r *http.Request) {
 	if result.Error != nil {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 	} else if result.RowsAffected == 0 || !utils.CompareHashedPasswords(
-		credentials.PassWord, user.PassWord,
+		user.PassWord, credentials.PassWord,
 	) {
 		http.Error(w, "Unauthorized", http.StatusUnauthorized)
 	} else {

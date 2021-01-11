@@ -4,7 +4,7 @@ import "fmt"
 
 var DB_HOST = "localhost"
 var DB_USER = "postgres"
-var DB_PWD = "mymotog2P"
+var DB_PWD = "dummypwd"
 var DB_NAME = "todo_db"
 var DB_PORT = 5432
 

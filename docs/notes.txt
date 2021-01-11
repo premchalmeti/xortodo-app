@@ -1,0 +1,88 @@
+- Tech stack:
+	* front-end:
+	- angular:
+		version: 9.1.2
+	- nvm
+	- node 10
+	- bootstrap 4
+	- angular material ui components
+
+	* back-end:
+	- go lang
+	- mux
+	- gorm
+	- postgres
+
+- Db:
+	- Users
+	- Todos
+
+- prj arch:
+	- flow
+	- directory structure
+	- Api structure
+
+
+- authentication
+	- token based
+	- session based
+		- redis as session store: redigo lib
+			(https://www.sohamkamani.com/golang/session-based-authentication/)
+
+mysql: https://tutorialedge.net/golang/golang-mysql-tutorial/
+go orm: https://tutorialedge.net/golang/golang-orm-tutorial/
+https://gobyexample.com/context
+https://golang.org/pkg/net/http/
+
+json:
+	https://golang.org/pkg/encoding/json/
+	https://blog.golang.org/json
+
+http:
+	router
+	context
+
+questions:
+	- http
+		- errors send [utils -> sendErrorResponse, sendSuccessResponse]
+		- servemux(): DefaultServeMux
+		- handlers
+
+Go lang directory structure:
+	* https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2
+	* https://tutorialedge.net/golang/go-project-structure-best-practices/
+	* https://github.com/golang-standards/project-layout
+	* Use cmd and pkg layout patterns for project repositories
+	* Go workspaces
+		- pkg/
+		- bin/
+		- src/
+			- prj_repo/
+				- configs/
+				- controllers/
+				- docs/
+				- models/
+				- utils/
+				- routers/
+				- scripts/
+				- web/
+				- go.sum
+				- go.mod
+				- main.go
+
+
+http.router
+	- built-in module
+
+	mux [lean framework|library]
+		- just plaing routing
+		- flask [microservices]
+		- wrapper over http.router [vars]
+		- use case: simple-medium project
+
+	gin: [framework]
+		- batteries included
+		- use case: medium-large project
+
+	orm:
+		- gorm

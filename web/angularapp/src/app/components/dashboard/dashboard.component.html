@@ -7,6 +7,9 @@
     <div *ngFor="let todo of todos">
       <app-todo [todo]="todo" (remove)='removeTodo(todo)'></app-todo>
     </div>
+    <div *ngIf="todos.length == 0" class="text-center w-100">
+      <p class="h2 text-muted">No Todos Added Yet!</p>
+    </div>
   </div>
 
   <button mat-fab color='primary' class="add-task-btn" (click)="openNewTodoDialog()">
